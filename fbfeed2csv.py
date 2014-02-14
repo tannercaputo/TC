@@ -62,5 +62,7 @@ try:
     f.close()
 except urllib2.HTTPError as e:
     print "Download failed:",e
+    error_message = e.read()
+    print error_message
 except KeyboardInterrupt:
     print "Canceled!"
